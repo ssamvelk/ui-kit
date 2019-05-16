@@ -1,0 +1,143 @@
+.calendar__wrp{
+    min-height: 430px;
+    
+    .hasDatepicker{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    
+    .ui-widget.ui-widget-content{
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+        box-sizing: border-box;
+        width: 279px;
+        height: 43px;
+        border: 0;
+        border-radius: 0;
+        background-color: #d54c2c;
+        
+    }
+    .ui-datepicker-calendar{
+        width: 279px;
+        margin: 0;
+        margin-bottom: 1px;
+        padding: 0;
+    }
+    .ui-datepicker-calendar > thead {
+        background-color: #e75735;
+        color: white;
+        font-size: 9px;
+        font-family: 'Lato Light';
+    }
+    .ui-datepicker-year{
+        display: none;
+    }
+    .ui-datepicker-month{ 
+        
+        color: white;
+        font-family: 'Lato Light';
+        font-size: 24px;
+
+    }
+    .ui-state-default, .ui-widget-content .ui-state-default,
+     .ui-widget-header .ui-state-default, .ui-button,
+      html .ui-button.ui-state-disabled:hover,
+     html .ui-button.ui-state-disabled:active{
+         border: none;
+     }
+
+     .ui-datepicker-buttonpane.ui-widget-content{
+        margin: 0;
+        padding: 0;  
+     }
+     .ui-datepicker-buttonpane.ui-widget-content{
+         border: 0;
+     }
+     .ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all{
+         width: 279px;
+         height: 48px;
+         block-size: border-box;
+         margin: 0;
+         padding: 0;
+         padding-left: 20px;
+         font-size: 13px;
+         color: #868686;
+         line-height: 48px;
+         text-align: left;
+         font-family: 'Lato';
+         background-color: #e5e5e5;
+         border: none;
+         border-radius: 0;
+         border-bottom-left-radius: 2px;
+         border-bottom-right-radius: 2px;
+         opacity: 1;
+     }
+
+    td > .ui-state-default{
+         text-align: center;
+         font-size: 20px;
+         color: #868686;
+         font-family: 'Source Sans Pro';
+     }
+     .ui-state-default.ui-state-highlight{
+        background-color: #e75735;
+        color: white;
+     }
+     .ui-state-default.ui-state-active{
+         color: white;
+     }
+    
+    .ui-icon.ui-icon-circle-triangle-w{
+        background: url("../img/Arrow_Left.png") no-repeat center center;
+    }
+    .ui-icon.ui-icon-circle-triangle-e{
+        background: url(../img/Arrow_Right.png) no-repeat center center;
+    }
+     /*
+     td.ui-datepicker-week-end.ui-datepicker-other-month.ui-datepicker-unselectable.ui-state-disabled > span {
+        color: white;
+     }
+     */
+}
+
+
+
+.calendar__title{
+
+    width: 279px;
+    height: 108px;
+    background-color: #e75735;
+    font-size: 80px;
+    color: white;
+    font-family: 'Lato Light';
+    text-align: center;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.calendar__main{
+
+}
+
+
+.calendar__footer{
+    box-sizing: border-box;
+    width: 279px;
+    height: 50px;
+    background-color: #e5e5e5;
+    color: #868686;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-family: 'Lato Black';
+    padding-left: 20px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+}

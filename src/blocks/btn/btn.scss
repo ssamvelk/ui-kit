@@ -1,0 +1,78 @@
+.button {
+    width: 78px;
+    height: 24px;
+    font-family: "Lato";
+    outline: none;
+    border: 1px solid #4eb7a8;
+    border-radius: 3px;
+    color: #4eb7a8;
+    background-color: white;  
+    font-size: 10px;
+    //font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 2px 0px 0px #28a290;
+    &:hover{
+      background: #4eb7a8;
+      border: none; 
+      color: white;
+    }
+    &:active{
+      box-shadow: none;
+      //transform: translateY(5px);
+    }
+  }
+
+  .button-red {
+    color: #e34a26;
+    //background-color: white;
+    border-color: #e34a26;
+    box-shadow: 0px 2px 0px 0px #bf3e1f;
+    &:hover{
+      color: white;
+      background-color: #e75735;
+      border-color: #e34a26;      
+    }
+    &:active{
+      box-shadow: none;
+    }
+  }
+  .button-big{
+    width: 118px;
+    height: 35px;
+  }
+  
+
+  [anim="ripple"] {
+    
+    //  Customize effect by defining the following
+    //  variables on the parent element 
+    //  --ripple-background: white;
+    //  --ripple-opacity: 0.3;  
+    //  --ripple-duration: 600ms;      
+    //  --ripple-easing: linear;
+    
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position:absolute;
+        display: block;
+        background: var(--ripple-background, white);      
+        border-radius: 50%;
+        pointer-events: none; 
+        
+        //  position and size 
+        top: calc(var(--y) * 1px);
+        left: calc(var(--x) * 1px);
+        width:  calc(var(--d) * 1px);
+        height: calc(var(--d) * 1px);
+
+        //  animated properties
+        opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));                
+        transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing,linear);   
+        transform: translate(-50%, -50%) scale(var(--s, 1));
+        transform-origin: center;
+    }
+}

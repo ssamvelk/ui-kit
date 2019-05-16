@@ -1,0 +1,70 @@
+@import "utils/reset.scss";
+@import "utils/fonts.scss";
+@import "utils/vars.scss";
+@import "utils/mixins.scss";
+
+
+html,
+body{
+    font-size: $mainFontSize;
+    font-family: $mainFont;
+    line-height: $mainLineHeight; 
+}
+
+.wrapper {
+    //box-sizing: border-box;
+    width: 594px;
+    margin: 0 auto;
+    //background-color: rgba($color: #cf0dbf, $alpha: 0.30);
+
+    h1, h2 {
+        font-size: 18px;
+        color: #4f4f4f;
+        text-align: center;
+        margin: 30px 0;
+        text-transform: uppercase;
+    }
+}
+.flex-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons__wrap,
+.arrow-buttons__wrap,
+.sliders__wrap,
+.form-elements-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.form-elements__toggle-wrap{
+    .flex-wrap{  
+        width: 135px;
+    }
+}
+.form-elements__search-drop-wrap,
+.form-elements__user-prof-wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    justify-content: space-between;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@import "../blocks/btn/btn.scss";
+@import "../blocks/arrow-btn/arrow-btn.scss";
+@import "../blocks/percent_pie/percent_pie.scss";
+@import "../blocks/sliders/sliders.scss";
+@import "../blocks/stages/stages.scss";
+@import "../blocks/form-elements/form-elements.scss";
+@import "../blocks/news_events/news_events.scss";
+@import "../blocks/location/location.scss";
+@import "../blocks/video/video.scss";
+@import "../blocks/messaging/messaging.scss";
+
+@import "../blocks/calendar/calendar.scss";
+

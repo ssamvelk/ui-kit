@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.psd
+
+#*.webm
+#/src/video/
+#src/video/
+#*.gitignore
+#*.mp4

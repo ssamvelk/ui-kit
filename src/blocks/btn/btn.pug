@@ -1,0 +1,11 @@
+
+mixin btn(options)
+  -
+    var buttonClassName = "button"
+    buttonClassName += options.isRed ? " button-red" : ""
+    buttonClassName += options.isBig ? " button-big" : ""
+    buttonClassName += options.width ?  (' button--'+options.width) : ""
+  button(class = buttonClassName, anim="ripple")= options.title || "Button"
+
+
+

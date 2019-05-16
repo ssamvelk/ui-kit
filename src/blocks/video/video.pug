@@ -1,0 +1,11 @@
+
+.video__wrp
+    video(class='video__main' id='video__main' width="594" height="340" poster="img/bg.jpg") 
+        source(src='./src/blocks/video/New_Zealand.webm' type='video/webm')
+        //-source(src="https://vimeo.com/62980495" type="video/mp4")
+        //-src='../blocks/video/New_Zealand.mp4'
+        //-poster="./src/blocks/video/bg.jpg"
+    .video__controls-wrp
+        a.video__play-btn
+        progress(class='video__progress' max="100" value="25")
+        button(class='video__fullscreen-btn')

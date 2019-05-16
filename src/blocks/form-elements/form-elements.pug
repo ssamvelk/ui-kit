@@ -1,0 +1,78 @@
+mixin form-elem__input(options)
+    -   var placeHolder = (options.type == 'text') ? "Your Name": "Your Email"
+    -   var className = ''
+    -   var elType = options.type
+    -   var check = (options.isChecked) ? 'true': 'false'
+    -   var labelClassName = 'check__label ' + (options.isChecked? 'check__label--active' : 'check__label--disable')
+    .form-elem__inp-wrap
+        if (options.type == 'checkbox')
+            input(class='form-elem__checkbox' type='checkbox' checked=check)
+            label(class=labelClassName for="form-elem__checkbox")
+        else if (options.type == 'radio')
+            input(class='form-elem__radio' type='radio' name='form-elem__radio' checked=check)
+            label(for="form-elem__radio")
+        else if (options.type == 'search')
+            - className = options.isError ? 'search--error': ''
+
+            form(class='form-elem__search-form' action="")
+                input(class='form-elem__search '+className  type=elType placeholder='Search' name="q")
+                button(class='form-elem__search-btn')
+        else if (options.type == 'select')
+            .form-elem__select-wrpp    
+                .form-elem__select-wrp    
+                    input(class='form-elem__select' type='text' size=1 id='sel' placeholder='Choose An Option' readonly)
+                    button(class='form-elem__select-lbl' for='sel') 
+                ul(class='form-elem__select-list select-list--disabled')
+                    li(class='form-elem__select-item') This is option 1
+                    li(class='form-elem__select-item') This is option 2
+                    li(class='form-elem__select-item') This is option 3
+                    li(class='form-elem__select-item') This is option 4 
+        else
+            - className = 'form-elem__inp' 
+            input(class= className type=elType placeholder= placeHolder )
+            .form-elem__popper.form-elem__popper--error THANKS! 
+
+
+//--------textarea
+mixin form-elem__textarea(options)
+    textarea(class='form-elem__textarea' placeholder="Your Message")
+
+
+
+//-форма отправки сообщения
+mixin form-elem(options)
+    form(class="form-elem__message-form" action="")
+        
+        +form-elem__input({type: 'text'})
+        +form-elem__input({type : 'email'})
+        +form-elem__textarea({})
+        +btn({isBig: true, title: 'submit'})
+
+
+//-------user profile
+mixin form-elem__user(options)
+    -var name = options.userName
+    -var prof = options.userProfesion
+    -var img = options.userFoto
+    -var socialClassName = options.isBlue ? 'user-info--blue': '' 
+    .form-elem__user-wrp
+        img(class='user__foto' src=img, alt="user foto" width='84px' height='84px')
+        div(class='form-elem__user-info '+socialClassName) 
+            span(class='user__name')=name
+            span(class='user__profesion')=prof
+            p(class='user__social-list')
+                a(class='user__social-item' href="#")
+                    <svg id="facebook" width="21" height="21" x="0px" y="0px" width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve">
+                    <path class="facebook-icon" d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+                    </svg>
+                a(class='user__social-item' href="#")
+                    <svg width="21" height="21" viewBox="0 -47 512.00203 512">
+                    <path d="m191.011719 419.042969c-22.140625 0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0"/>
+                    </svg>
+                a(class='user__social-item' href="#")
+                    <svg id="drib" width="21" height="21" x="0px" y="0px" viewBox="0 0 508.52 508.52" >
+                    <path d="M254.26,0C114.067,0,0,114.067,0,254.26s114.067,254.26,254.26,254.26 s254.26-114.067,254.26-254.26S394.452,0,254.26,0z M422.357,117.246c30.257,36.963,48.532,84.033,49.009,135.298 c-7.183-1.526-78.916-16.082-151.221-6.992l-4.672-11.219c-4.513-10.584-9.344-21.104-14.397-31.465 C381.39,170.1,417.781,123.443,422.357,117.246z M254.26,37.408c55.174,0,105.613,20.69,143.943,54.729 c-3.877,5.562-36.55,49.485-113.781,78.439c-35.596-65.377-75.038-119.089-81.045-127.13 C219.712,39.506,236.748,37.408,254.26,37.408z M161.932,58.035c5.721,7.85,44.527,61.626,80.505,125.604 c-101.577,26.983-191.044,26.602-200.77,26.475C55.746,142.703,101.164,86.703,161.932,58.035z M37.058,254.578l0.095-6.643 c9.503,0.222,114.767,1.557,223.177-30.893c6.261,12.173,12.173,24.536,17.639,36.868l-8.581,2.574 c-111.97,36.2-171.562,134.917-176.52,143.307C58.226,361.303,37.09,310.388,37.058,254.578z M254.228,471.747 c-50.185,0-96.46-17.099-133.296-45.83c3.909-7.946,47.896-92.932,170.386-135.616l1.43-0.477 c30.511,79.202,43.065,145.627,46.339,164.697C313.057,465.613,284.358,471.779,254.228,471.747z M375.605,434.625 c-2.225-13.222-13.825-76.786-42.175-154.844c68.046-10.901,127.829,6.96,135.266,9.312 C458.971,349.48,424.36,401.699,375.605,434.625z"/>
+                    </svg>
+
+                
+

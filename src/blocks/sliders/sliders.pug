@@ -1,0 +1,22 @@
+mixin slider(options)
+    -
+        var buttonClassName = "slider"
+        buttonClassName += options.isRed ? " slider--red": ""
+        buttonClassName += options.isBlue ? " slider--blue": ""
+    .slider_wrp
+        if options.isRed
+            .slider__popper(id="result-polzunok" value="") 0
+        
+        input(class=buttonClassName type="range" value=0 step="1" min=0 max=100 )     
+
+        if options.isBlue
+            .slider__lineika
+                ul.slider__list
+                    li 0
+                    li 25
+                    li 50
+                    li 75
+                    li 100
+  
+    //-script
+        include sliders.js

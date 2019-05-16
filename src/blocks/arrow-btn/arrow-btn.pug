@@ -1,0 +1,14 @@
+mixin arrow-btn(options)
+  -
+    let buttonClassName = "arrow-btn"
+    buttonClassName += options.isLeft ? " arrow-btn--left" : ""
+    buttonClassName += options.isRight ? " arrow-btn--right" : ""
+    buttonClassName += options.isUp ? " arrow-btn--up" : ""
+    buttonClassName += options.isDown ? " arrow-btn--down" : ""
+    
+  - if (options.isDisabled == true)
+    button(class = buttonClassName, disabled )
+        span
+  - else
+    button(class = buttonClassName)
+        span

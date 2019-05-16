@@ -1,0 +1,40 @@
+.arrow-btn{
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid #4eb7a8;
+    border-radius: 50%;
+    cursor: pointer;
+
+    span{
+        display: block;
+        margin: auto;
+        width: 12px;
+        height: 12px;
+        border: solid  #4eb7a8;
+        border-width: 0 3px 3px 0;
+    }
+
+    &:hover{
+        background-color: #4eb7a8;
+        span{
+            border-color: white;    
+        }    
+    }
+    &:disabled{
+        background-color: #e5e5e5;
+        border: solid #e5e5e5;
+        span{
+            border-color: white;
+        }  
+    }
+
+}
+.arrow-btn--left{transform: rotate(-45deg);}
+.arrow-btn--right{transform: rotate(135deg);}
+.arrow-btn--up{transform: rotate(-135deg);}
+.arrow-btn--down{transform: rotate(45deg);}
+
+

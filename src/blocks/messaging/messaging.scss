@@ -1,0 +1,84 @@
+.messaging__wrp{
+    box-sizing: border-box;
+    width: 288px;
+    height: 428px;
+
+    .button--243{
+        width: 243px;
+        height: 23px;
+        margin: 20px;
+        background-color: #4eb7a8;
+        color: white;
+        
+    }
+}
+.messaging__title{
+    position: relative;
+    height: 116px;
+    background-color: #4eb7a8;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.messaging__pen-friend-name{
+    font-size: 34px;
+    font-family: 'Source Sans Pro Light';
+    color: white;
+    text-align: center;
+    
+}
+.messaging__user-foto{
+    position: absolute;
+    left: 93px;
+    bottom: -50px;
+    border: 4px solid #e5e5e5;
+    border-radius: 50px;
+}
+.messaging__body{
+    height: 312px;
+    background-color: #f2f2f2;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-size: 12.5px;
+}
+.messaging__icons{
+    display: flex;
+    justify-content: space-between;
+    //box-sizing: border-box;
+    width: 243px;
+    height: 22px;
+    //border: 1px solid blueviolet;
+    margin: 0 20px ;
+    padding-top: 20px;
+}
+.messaging__pen-friend{
+
+    box-sizing: border-box;
+    width: 243px;
+    height: 69px;
+    color: #868686;
+    background-color:white;
+    
+    font-family: 'Lato Bold';
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 23px;
+    padding: 20px;
+    border-radius: 2px;
+
+}
+.messaging__my-msc{
+    box-sizing: border-box;
+    width: 243px;
+    min-height: 69px;
+    background-color: #e5e5e5;
+    color: #777777;
+    font-size: 12.5px;
+    font-family: 'Lato Bold';
+    margin: 0 20px ;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 2px;
+    resize:none;
+    outline:none;
+    overflow: hidden;
+}

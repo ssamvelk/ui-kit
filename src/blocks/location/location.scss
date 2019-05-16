@@ -1,0 +1,144 @@
+.location__wrp{
+    position: relative;
+    box-sizing: border-box;
+    
+    border-radius: 3px;
+    width: 594px;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+}
+.location__map{
+
+    width: 594px;
+    height: 274px;
+}
+.location__balloon{
+    //position: absolute;
+    //top: 200px;
+    box-sizing: border-box;
+    width: 594px;
+    height: 70px;
+    background-color: #e75735;
+    color: white;
+    display: flex;
+    line-height: 70px;
+
+    span{
+        font-size: 30px;
+        font-family: 'Lato Light';
+        margin-left: 30px;
+    }
+    p{
+        margin-top: 20px;
+        margin-left: 25px;
+        font-size: 12.5px;
+        font-family: 'Lato';
+        line-height: 1.5;
+    }
+}
+
+.location__myLocation {
+
+    margin-top: 23px;
+    margin-left: 24px;
+}
+.location__pin{
+    margin-top: 21px;
+    margin-left: 200px;
+}
+#Icon-Pin,
+#Icon-My_Location{
+    
+    fill: white;
+}
+
+
+/*
+//слой всей map
+.ymaps-2-1-73-map{
+    box-sizing: border-box;
+    width: 594px;
+    height: 70px;
+}
+
+//слой всего ballon
+.ymaps-2-1-73-balloon__layout{
+    display: flex;
+    width: 594px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+.ymaps-2-1-73-balloon__tail{//убрили хвостик
+    display: none;
+
+    &::after,
+    &::before{
+        display: none;
+    }
+}
+.ymaps-2-1-73-balloon__content{
+    width: 570px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+
+    &:first-child{
+        display: inline-block;
+        width: 570px;
+        height: 70px;
+    }
+}
+
+
+
+.model,.controller{display: none;}
+.ymaps-2-1-73-balloon__close + .ymaps-2-1-73-balloon__content {
+
+    margin: 0;
+    margin-right: 0;
+    padding: 0;
+
+}
+
+
+
+//----------кнопка закрытия
+//.ymaps-2-1-73-balloon__close,
+//.ymaps-2-1-73-balloon__close-button{
+//    display: none;
+//}
+
+.ymaps-2-1-73-balloon-overlay{
+    width: 570px;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.ymaps-2-1-73-balloon__content{
+    width: 570px;
+    height: 70px;
+}
+
+//копирайт и как добраться
+.ymaps-2-1-73-copyrights-pane,
+.ymaps-2-1-73-copyright__content,
+.ymaps-2-1-63-gotoymaps-container,
+.ymaps-2-1-73-copyright__wrap,
+.ymaps-2-1-73-copyright__layout,
+.ymaps-2-1-73-copyright__content-cell,
+.ymaps-2-1-73-copyright, 
+.ymaps-2-1-73-copyright_logo_no{
+    display: none;
+    content: '';
+}
+
+
+
+
+*/
+

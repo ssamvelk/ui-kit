@@ -1,0 +1,113 @@
+include ../blocks/btn/btn.pug
+include ../blocks/arrow-btn/arrow-btn.pug
+include ../blocks/percent_pie/percent_pie.pug
+include ../blocks/sliders/sliders.pug
+include ../blocks/stages/stages.pug
+include ../blocks/form-elements/form-elements.pug
+include ../blocks/news_events/news_events.pug
+
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        //-script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        //-script(src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js")
+        //-link(rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css")
+
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=<926a9ceb-e073-4778-bd79-0a53fb713dc8>&lang=ru_RU" type="text/javascript")
+        
+        title UI-kit
+    body
+        main.wrapper
+            section.buttons
+                h1 standard  buttons
+                .buttons__wrap
+                    +btn({})
+                    +btn({isBig: true})
+                    +btn({isRed: true, isBig: true})
+                    +btn({isRed: true})
+            
+            section.arrow-buttons
+                h1 arrow  buttons
+                .arrow-buttons__wrap
+                    +arrow-btn({isRight: true})
+                    +arrow-btn({isLeft: true})
+                    +arrow-btn({isRight: true, isDisabled: true})
+                    +arrow-btn({isLeft: true, isDisabled: true})               
+
+            section.pie-chart
+                h1 percentages / pie chart
+                .pie-chart__wrap
+                    +circle-perc({percent: '0'})
+                    +circle-perc({percent: '38'})
+                    +circle-perc({percent: '65'})
+                    +circle-perc({percent: '100'})
+                    +circle-pie({percents: [100, 65, 30, 15]})
+            section.sliders
+                h1 sliders
+                .sliders__wrap
+                    +slider({isRed: true})
+                    +slider({isBlue: true})
+            section.stages
+                h1 stages
+                .stages__wrap
+                    +stages({})
+            section.form-elements
+                h1 form elements
+                .form-elements-wrap
+                    .form-elements__inputs-wrap
+                        +form-elem({})                        
+                    .form-elements__btn-wrap
+                        .form-elements__toggle-wrap
+                            h2 toogle
+                            .flex-wrap 
+                                +form-elem__input({type: 'checkbox', isChecked: false})
+                                +form-elem__input({type: 'checkbox', isChecked: true})
+                        .form-elements__tick-boxes-wrap
+                            h2 tick boxes
+                            .flex-wrap
+                                +form-elem__input({type: 'radio', isChecked: true})
+                                +form-elem__input({type: 'radio'})
+                .flex-wrap    
+                    .form-elements__search-drop-wrap
+                        h2 SEARCH / DROP DOWN
+                        +form-elem__input({type: 'search'})
+                        +form-elem__input({type: 'search', isError: true})
+                        
+                        +form-elem__input({type: 'select'})
+                    .form-elements__user-prof-wrap
+                        h2 USER  PROFILE
+                        each item in [{userName: 'John Smith', userProfesion:'UX  DESIGNER', userFoto:'../img/user1.png'}, {userName: 'Sarah Brown', userProfesion:'DEVELOPER', userFoto:'../img/user2.png', isBlue:true}]
+                            +form-elem__user(item)
+                        //-
+                            +form-elem__user({userName: 'John Smith', userProfesion:'UX  DESIGNER', userFoto:'/src/img/user1.png'})
+                            +form-elem__user({userName: 'Sarah Brown', userProfesion:'DEVELOPER', userFoto:'/src/img/user2.png', isBlue:true})
+            section.news-events
+                h1 news events
+                .flex-wrap 
+                    +news({})
+                    +events({})
+            section.location
+                h1 location
+                include ../blocks/location/location.pug
+            section.calendar-messaging
+                .flex-wrap
+                    .calendar
+                        h1 calendar
+                        include ../blocks/calendar/calendar.pug
+                    .messaging
+                        h1 messaging
+                        
+                        include ../blocks/messaging/messaging.pug
+            section.video
+                h1 video
+                include ../blocks/video/video.pug
+
+
+            //-    
+                section
+                    .BGG
+                        img(class='IMGG' src='u.png' alt='REQUIRE_IMG' width='100')

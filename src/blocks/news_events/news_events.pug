@@ -1,0 +1,20 @@
+mixin news(options)
+    //-var options.type
+    .news-wrp
+        .news__foto-wrp
+        .news__info-wrp
+            span.news__title It’s all going<br>downhill
+            span.news__date 24  AUGUST  2013
+            p.news__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.
+            
+
+mixin events(options)
+    //-var options.type
+    .events-wrp
+        .events__foto-wrp
+        .events__info-wrp
+            p.events__date <span>24</span> Aug
+            span.events__title THIS IS THE TITLE
+            p.events__info Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            //-button.events__calendar-btn ADD  TO  CALENDAR
+            +btn({title:'ADD  TO  CALENDAR', width: 128})

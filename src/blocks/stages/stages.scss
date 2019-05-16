@@ -1,0 +1,48 @@
+.stage-wrp{
+    position: relative;
+    width: 560px;
+}
+.stage__list{
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 560px;
+    top: -24px;
+}
+.stage__item{
+    width: 29px;
+    height: 29px;
+    background-color: #e5e5e5;
+    color: #888888;
+    text-align: center;
+    line-height: 29px;
+    user-select: none;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        width: 130px;
+        height: 5px;
+        background-color: #e5e5e5;
+        top: 13px;
+        left: -115px;
+        z-index : -1;
+    }
+    &:first-child::before{
+        content: none;
+    }    
+}
+
+.stage__item--active{
+    background-color: #e75735;
+    color: white;
+
+    &::before{
+        background-color: #e75735;
+    }
+}
