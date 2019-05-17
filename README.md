@@ -1,1 +1,1 @@
-https://ssamvelk.github.io/ui-kit/
+https://ssamvelk.github.io/ui-kit/  -верстка компонентов
